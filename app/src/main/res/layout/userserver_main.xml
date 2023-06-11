@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ServerWindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF007F5F"
+    android:orientation="vertical"
+    tools:context=".ServerActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Menu"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="#FF007F5F">
+
+                <com.michaldrabik.tapbarmenulib.TapBarMenu
+                    android:id="@+id/ServerMenu"
+                    android:layout_width="340dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tbm_backgroundColor="#FEFAE0"
+                    app:tbm_buttonPosition="right"
+                    app:tbm_iconClosed="@drawable/ic_menu"
+                    app:tbm_iconOpened="@drawable/ic_color"
+                    app:tbm_menuAnchor="bottom"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ServerCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/ic_code" />
+
+                    <ImageView
+                        android:id="@+id/ServerLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/ic_location" />
+
+                    <ImageView
+                        android:id="@+id/ServerNews"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/ic_news" />
+
+
+                </com.michaldrabik.tapbarmenulib.TapBarMenu>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ServerMainShowWindow"
+                android:layout_width="340dp"
+                android:layout_height="400dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#E0E1DD">
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/ServerViewPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="MissingConstraints">
+
+                    
+                </androidx.viewpager.widget.ViewPager>
+
+                <!--                <WebView-->
+<!--                    android:id="@+id/ServerWeb"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent" />-->
+
+                <com.amap.api.maps.MapView
+
+                    android:id="@+id/ServerMap"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.amap.api.maps.MapView>
+
+                <ImageView
+                    android:id="@+id/dimensional_barcode"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="106dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="106dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/ServerTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.564"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/FreshTimeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_refresh_light"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ServerTime"
+                    app:layout_constraintTop_toBottomOf="@+id/dimensional_barcode" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/left_layout"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#E0E1DD"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <Switch
+            android:id="@+id/LocationServer"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/register_shape2"
+            android:drawableLeft="@drawable/ic_upload"
+            android:text="定位上传"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ServerUserHead"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/LocationServer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="65dp"
+                android:background="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_user1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--        <Button-->
+        <!--            android:id="@+id/ServerRegister"-->
+        <!--            android:layout_width="240dp"-->
+        <!--            android:layout_height="89dp"-->
+        <!--            android:layout_marginBottom="291dp"-->
+        <!--            android:drawableStart="@drawable/ic_help"-->
+        <!--            android:text="帮  助"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textSize="13sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            tools:ignore="MissingConstraints"-->
+        <!--            tools:layout_editor_absoluteX="-55dp" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

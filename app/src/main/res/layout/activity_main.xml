@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SignInWindow"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#FDFFFC"
+    android:foregroundTint="#83AEDA"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/UserShowCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:text="显示密码"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="NotSibling" />
+
+    <CheckBox
+        android:id="@+id/UserRememberCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="记住密码"
+        app:layout_constraintStart_toEndOf="@+id/UserShowCode"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <TextView
+        android:id="@+id/UserHelp"
+        android:layout_width="57dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="25dp"
+        android:clickable="true"
+        android:gravity="center|center_horizontal"
+        android:text="帮助"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserRegisterButton2"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/UserChangeCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="140dp"
+        android:text="忘记密码"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/UserHelp"
+        app:layout_constraintTop_toBottomOf="@+id/UserRegisterButton2" />
+
+    <Button
+        android:id="@+id/UserRegisterButton2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/SoftName"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/login_button"
+        android:freezesText="false"
+        android:text="注册"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserSignInButton1" />
+
+    <Button
+        android:id="@+id/UserSignInButton1"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/UserRegisterButton2"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/login_button"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserShowCode" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SoftName">
+
+        <AutoCompleteTextView
+            android:id="@+id/UserName"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/SoftName"
+            android:layout_alignStart="@+id/SoftName"
+            android:background="@drawable/login_text"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF212529"
+            android:textColorLink="#FF212529" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/UserCode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SoftName"
+            android:layout_alignStart="@+id/SoftName"
+            android:background="@drawable/login_text"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColorHighlight="#FF212529"
+            android:textColorLink="#FF212529" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/SoftName"
+        android:layout_width="255dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app2" />
+
+    <TextView
+        android:id="@+id/UserNameTip"
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:text="用户名"
+        android:textAlignment="center"
+        android:textColor="#212529"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SoftName" />
+
+    <TextView
+        android:id="@+id/UserCodeTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/UserNameTip"
+        android:layout_alignStart="@+id/UserNameTip"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="80dp"
+        android:text="密  码"
+        android:textColor="#212529"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserNameTip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

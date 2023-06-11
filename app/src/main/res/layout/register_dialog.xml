@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RegisterDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFFFC"
+    android:backgroundTint="#FDFFFC"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="295dp"
+        android:backgroundTint="#FFFFFF">
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/register_edittext"
+            android:clickable="true"
+            android:cursorVisible="true"
+            android:ems="10"
+            android:text="密码"
+            android:textColor="#ACA3A3"
+            android:textSize="17sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <EditText
+            android:id="@+id/editTextTextPasswordSure"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/register_edittext"
+            android:clickable="true"
+            android:ems="10"
+            android:text="确认密码"
+            android:textColor="#ACA3A3"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/register_edittext"
+            android:clickable="true"
+            android:cursorVisible="true"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#ACA3A3"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/RegisterNameShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginBottom="3dp"
+            android:text="用户名"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/RegisterCodeShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginBottom="3dp"
+            android:text="密码"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/RegisterCodeSureShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginBottom="3dp"
+            android:text="确认密码"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPasswordSure"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="356dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="-3dp"
+            android:background="#FF007F5F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/RegisterAbort"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_back"
+            android:backgroundTint="#FDFFFC"
+            android:textColorHighlight="#FDFFFC"
+            android:textColorLink="#FDFFFC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="140dp">
+
+        <Button
+            android:id="@+id/RegisterSure"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/register_button"
+            android:backgroundTint="#FF007F5F"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/RegisterTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="122dp"
+            android:layout_marginTop="6dp"
+            android:textAlignment="center"
+            android:textColor="#C53C3C"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

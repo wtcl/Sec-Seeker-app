@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/new_list"
+        android:layout_width="114dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="-26dp" />
+
+    <TextView
+        android:id="@+id/news2_content"
+        android:layout_width="225dp"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/new_list"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/news2_3"
+        android:layout_width="220dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/news2_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/news2_content" />
+
+    <TextView
+        android:id="@+id/news2_2"
+        android:layout_width="220dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/news2_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/news2_content" />
+
+    <TextView
+        android:id="@+id/news2_1"
+        android:layout_width="220dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/news2_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/news2_content" />
+
+    <TextView
+        android:id="@+id/news2_search"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="45dp"
+        android:background="#d6d6d6"
+        android:drawableStart="@drawable/ic_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/news2_3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
